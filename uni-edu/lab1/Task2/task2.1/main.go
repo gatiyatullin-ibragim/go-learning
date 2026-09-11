@@ -12,5 +12,7 @@ func main() {
 	arr := [5]int{10, 20, 30, 40, 50}
 	s4 := arr[1:4]
 
-	fmt.Println(s1, s2, s3, s4)
+	s5 := new([]int)
+
+	fmt.Println(s1, s2, s3, s4, s5)
 }
