@@ -1,23 +1,20 @@
 package main
 
-import (
-	"fmt"
-	"unsafe"
-)
-
-type Slice struct {
-	array unsafe.Pointer
-	len   int
-	cap   int
-}
+import "fmt"
 
 func main() {
-	cars := []string{"Ferrari", "Honda", "Ford", "BYD"}
-	fmt.Println("cars:", cars, "has old length", len(cars), "and capacity", cap(cars))
-	cars = append(cars, "Toyota")
-	fmt.Println("cars:", cars, "has new length", len(cars), "and capacity", cap(cars))
+	// Способ 1: через var с указанием типа (nil-слайс)
+	var s1 []int
+
+	// Способ 2: слайс-литерал
+	s2 := []int{1, 2, 3, 4, 5}
+
+	// Способ 3: через make(тип, длина, вместимость)
+	s3 := make([]int, 5, 10)
+
+	// Способ 4: через срез от массива или другого слайса
+	arr := [5]int{10, 20, 30, 40, 50}
+	s4 := arr[1:4]
+
+	fmt.Println(s1, s2, s3, s4)
 }
-
-//cars: [Ferrari Honda Ford BYD] has old length 4 and capacity 4
-//cars: [Ferrari Honda Ford BYD Toyota] has new length 5 and capacity 8
-
