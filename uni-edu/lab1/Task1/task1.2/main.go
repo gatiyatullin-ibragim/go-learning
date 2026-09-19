@@ -8,3 +8,4 @@ func main(){
 }
 
 //output: [1 2 3 0 0]
+//free spaces will be filled up with the zeroes 
