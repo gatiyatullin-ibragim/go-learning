@@ -7,7 +7,7 @@ func main() {
 	var arr2 [5]int = [5]int{1, 2, 3, 4, 5}
 	arr3 := [5]int{1, 2, 3}
 	fmt.Println(arr)
-	fmt.Println(arr2)
+	fmt.Println(arr2) 	
 	fmt.Print(arr3)
 
 }
